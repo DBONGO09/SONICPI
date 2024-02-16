@@ -89,114 +89,120 @@ live_loop:background_notes do
       play:E4, amp: 1
       sleep 1
     end
-    stop
   end
-  
-  live_loop :war do
-    8.times do
-      use_synth :prophet
-      #measure1
-      play :cs5
-      play :ds4
-      sleep 2
-      play :bs4
-      play :e4
-      sleep 2
-      #measure2
-      play :cs5
-      play :ds4
-      sleep 2
-      play :e4
-      play :cs4, sustain: 2
-      sleep 1
-      play :gs4
-      sleep 1
-      #measure3
-      
-      play :cs5
-      play :ds4
-      sleep 2
-      play :bs4
-      play :e4
-      sleep 2
-      #measure4
-      play :cs5
-      play :ds4
-      sleep 2
-      play :cs6
-      play :cs5
-      sleep 0.5
-      play :b5
-      play :b4
-      sleep 0.5
-      play :a5
-      play :a4
-      sleep 0.5
-      play :g5
-      play :g4
-      sleep 0.5
-    end
-    stop
-  end
-  
-  
-  # Measure 1
-  play :r
-  sleep 1
-  play:E4
-  play:Gs4
-  sleep 2
-  play:E5
-  play:Gs4
-  sleep 1
-  
-  # Measure 2
-  measure2
-  
-  # Measure 3
-  measure3
-  
-  # Measure 4
-  measure3
-  
-  
-  # Measure 5
-  measure5
-  
-  # Measure 6
-  measure3
-  
-  
-  # Measure 7
-  measure5
-  
-  # Measure 8
-  measure2
-  
-  sleep 2
-  
-  
-  use_synth :beep
-  play :C4
-  sleep 0.5
-  play :E4
-  sleep 0.5
-  play :G4
-  sleep 0.5
-  play :B4
-  sleep 0.5
-  
-  
-  sleep 2
-  
-  
-  use_synth :beep
-  play :C5
-  sleep 0.5
-  play :B4
-  sleep 0.5
-  play :G4
-  sleep 0.5
-  play :E4
-  sleep 0.5
+  stop
 end
+
+live_loop :war do
+  8.times do
+    use_synth :prophet
+    #measure1
+    play :cs5
+    play :ds4
+    sleep 2
+    play :bs4
+    play :e4
+    sleep 2
+    #measure2
+    play :cs5
+    play :ds4
+    sleep 2
+    play :e4
+    play :cs4, sustain: 2
+    sleep 1
+    play :gs4
+    sleep 1
+    #measure3
+    
+    play :cs5
+    play :ds4
+    sleep 2
+    play :bs4
+    play :e4
+    sleep 2
+    #measure4
+    play :cs5
+    play :ds4
+    sleep 2
+    play :cs6
+    play :cs5
+    sleep 0.5
+    play :b5
+    play :b4
+    sleep 0.5
+    play :a5
+    play :a4
+    sleep 0.5
+    play :g5
+    play :g4
+    sleep 0.5
+  end
+  stop
+end
+
+
+# Measure 1
+play :r
+sleep 1
+play:E4
+play:Gs4
+sleep 2
+play:E5
+play:Gs4
+sleep 1
+
+# Measure 2
+measure2
+
+# Measure 3
+measure3
+
+# Measure 4
+measure3
+
+
+# Measure 5
+measure5
+
+# Measure 6
+measure3
+
+
+# Measure 7
+measure5
+
+# Measure 8
+measure2
+
+sleep 2
+
+
+use_synth :beep
+play :C4
+sleep 0.5
+play :E4
+sleep 0.5
+play :G4
+sleep 0.5
+play :B4
+sleep 0.5
+
+
+sleep 2
+
+
+use_synth :beep
+play :C5
+sleep 0.5
+play :B4
+sleep 0.5
+play :G4
+sleep 0.5
+play :E4
+sleep 0.5
+
+sample :misc_burp
+stop
+
+
+
