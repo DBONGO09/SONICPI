@@ -1,8 +1,95 @@
-# Sonic Pi Code for "Fields of Forever" (Intro)
+
 use_bpm 144
 
-# First 16 notes (repeated twice)
-# all cs, ds, fs, gs are sharp
+live_loop :djamal do
+  8.times do
+    use_synth :prophet
+    play :c2
+    sleep 0.5
+    play :e2
+    sleep 0.5
+    play :g2
+    sleep 0.5
+    play :b2
+    sleep 0.5
+    
+    play :c3
+    sleep 0.5
+    play :b2
+    sleep 0.5
+    play :g2
+    sleep 0.5
+    play :e2
+    sleep 0.5
+  end
+  stop
+end
+
+sleep 16
+
+live_loop :jamal do
+  4.times do
+    use_synth :piano
+    play :c1
+    sleep 0.5
+    play :e1
+    sleep 0.5
+    play :g1
+    sleep 0.5
+    play :b1
+    sleep 0.5
+    
+    play :c2
+    sleep 0.5
+    play :b1
+    sleep 0.5
+    play :g1
+    sleep 0.5
+    play :e1
+    sleep 0.5
+  end
+  stop
+end
+
+sleep 8
+
+live_loop :zamal do
+  2.times do
+    use_synth :saw
+    play :c4
+    sleep 0.5
+    play :e4
+    sleep 0.5
+    play :g4
+    sleep 0.5
+    play :b4
+    sleep 0.5
+    
+    play :c4
+    sleep 0.5
+    play :b4
+    sleep 0.5
+    play :g4
+    sleep 0.5
+    play :e4
+    sleep 0.5
+  end
+  stop
+end
+
+sleep 9
+
+sample "C:/Users/djamal_bongo/Desktop/audiomass-output.mp3"
+
+
+
+sleep 5
+
+sample "C:/Users/djamal_bongo/Desktop/name.mp3"
+
+
+sleep 20
+
 1.times do
   use_synth :piano
   #measure1
@@ -74,23 +161,4 @@ end
 
 sleep 2
 
-live_loop :djamal do
-  use_synth :prophet
-  play :c2
-  sleep 0.5
-  play :e2
-  sleep 0.5
-  play :g2
-  sleep 0.5
-  play :b2
-  sleep 0.5
-  
-  play :c3
-  sleep 0.5
-  play :b2
-  sleep 0.5
-  play :g2
-  sleep 0.5
-  play :e2
-  sleep 0.5
-end
+
