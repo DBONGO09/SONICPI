@@ -1,6 +1,18 @@
 
 use_bpm 144
 
+massacare =  "C:/Users/djamal_bongo/Desktop/name.mp3"
+
+boomin =  "C:/Users/djamal_bongo/Desktop/2t.mp3"
+
+war = "C:/Users/djamal_bongo/Desktop/war.mp3"
+
+risingamp = 2
+
+loweramp = 16
+
+
+
 live_loop :djamal do
   8.times do
     use_synth :prophet
@@ -79,13 +91,13 @@ end
 
 sleep 9
 
-sample "C:/Users/djamal_bongo/Desktop/audiomass-output.mp3"
+sample boomin
 
 
 
 sleep 5
 
-sample "C:/Users/djamal_bongo/Desktop/name.mp3"
+sample massacare
 
 
 sleep 20
@@ -159,6 +171,17 @@ sleep 2
   sleep 0.5
 end
 
-sleep 2
+sleep 1
 
+live_loop :wamal do
+  8.times do
+    sleep 1
+    sample :drum_bass_hard, amp: risingamp
+    risingamp = risingamp + 2
+  end
+  stop
+end
 
+sleep 9
+
+sample war
