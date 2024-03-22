@@ -1,186 +1,209 @@
-use_bpm 144
+# Sonic Pi Code for "Smooth Criminal" Melody
+use_bpm 118
 
-massacare =  "C:/Users/djamal_bongo/Desktop/name.mp3"
+chrome = "C:/Users/djamal_bongo/Desktop/chrome.mp3"
 
-boomin =  "C:/Users/djamal_bongo/Desktop/2t.mp3"
+Gronk = "C:/Users/djamal_bongo/Desktop/gronk.mp3"
 
-war = "C:/Users/djamal_bongo/Desktop/war.mp3"
+did = "C:/Users/djamal_bongo/Desktop/did.mp3"
+
+take = "C:/Users/djamal_bongo/Desktop/akt.mp3"
+
+twenty = "C:/Users/djamal_bongo/Desktop/242.mp3"
+
+see = "C:/Users/djamal_bongo/Desktop/see2.mp3"
+
+town = "C:/Users/djamal_bongo/Desktop/town.mp3"
+
 
 risingamp = 2
 
-loweramp = 16
+loweramp = 14
 
+notes = [:e5, :d5, :e5, :d5, :e5, :b4, :d5, :c5, :a4, :a4, :b4, :e4, :g4, :b4, :c5, :d5, :e5, :d5, :c5, :b4, :a4 ]
 
+durations = [ 0.5, 0.5, 0.5, 0.5, 0.5, 1, 1, 0.5, 0.5, 0.5, 1, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1]
 
-live_loop :djamal do
-  8.times do
+define :play_million do |notes, durations|
+  i=0
+  len = notes.length
+  
+  21.times do
+    use_bpm 170
     use_synth :prophet
-    play :c2
-    sleep 0.5
-    play :e2
-    sleep 0.5
-    play :g2
-    sleep 0.5
-    play :b2
-    sleep 0.5
-    
-    play :c3
-    sleep 0.5
-    play :b2
-    sleep 0.5
-    play :g2
-    sleep 0.5
-    play :e2
-    sleep 0.5
+    play notes [i]
+    sleep durations [i]
+    i = i + 1
   end
-  stop
 end
 
-sleep 20
-
-live_loop :jamal do
-  4.times do
-    use_synth :piano
-    play :c1
-    sleep 0.5
-    play :e1
-    sleep 0.5
-    play :g1
-    sleep 0.5
-    play :b1
-    sleep 0.5
-    
-    play :c2
-    sleep 0.5
-    play :b1
-    sleep 0.5
-    play :g1
-    sleep 0.5
-    play :e1
-    sleep 0.5
-  end
-  stop
+define :x do |n1, n2|
+  play n1
+  play n2
+  sleep 0.5
 end
 
-sleep 8
+sample chrome
 
-live_loop :zamal do
-  2.times do
-    use_synth :saw
-    play :c4
-    sleep 0.5
-    play :e4
-    sleep 0.5
-    play :g4
-    sleep 0.5
-    play :b4
-    sleep 0.5
-    
-    play :c4
-    sleep 0.5
-    play :b4
-    sleep 0.5
-    play :g4
-    sleep 0.5
-    play :e4
-    sleep 0.5
-  end
-  stop
+sleep 12
+
+
+define :smooth do
+  play :e4
+  sleep 0.5
+  play :d4
+  sleep 0.5
+  play :c4
+  sleep 0.5
+  play :b3
+  sleep 0.5
+  play :e4
+  sleep 0.5
+  play :d4
+  sleep 0.5
+  play :c4
+  sleep 0.5
+  play :b3
+  sleep 0.5
+  play :e4
+  sleep 0.5
+  play :d4
+  sleep 0.5
+  play :c4
+  sleep 0.5
+  play :b3
+  sleep 0.5
+  play :c4
+  sleep 0.5
 end
-
-sleep 9
-
-sample boomin
-
-
-
-sleep 5
-
-sample massacare
-
-
-sleep 16
 
 1.times do
-  use_synth :piano
-  #measure1
-  play :cs5
-  play :ds4
-  sleep 2
-  play :bs4
-  play :e4
-  sleep 2
-  #measure2
-  play :cs5
-  play :ds4
-  sleep 2
-  play :e4
-  play :cs4, sustain: 2
-  sleep 1
-  play :gs4
-  sleep 1
-  #measure3
-  play :cs5
-  play :ds4
-  sleep 2
-  play :bs4
-  play :e4
-  sleep 2
-  #measure4
-  play :cs5
-  play :ds4
-  sleep 2
-  play :cs6
-  play :cs5
-  sleep 0.5
-  play :b5
-  play :b4
-  sleep 0.5
-  play :a5
-  play :a4
-  sleep 0.5
-  play :g5
-  play :g4
-  sleep 0.5
-end
-
-sleep 2
-
-1.times do
-  play :C4
-  sleep 0.5
-  play :E4
-  sleep 0.5
-  play :G4
-  sleep 0.5
-  play :B4
-  sleep 0.5
-end
-
-sleep 2
-
-1.times do
-  play :C5
-  sleep 0.5
-  play :B4
-  sleep 0.5
-  play :G4
-  sleep 0.5
-  play :E4
-  sleep 0.5
+  smooth
 end
 
 sleep 0.5
 
-live_loop :wamal do
-  8.times do
-    sleep 1
-    sample :drum_bass_hard, amp: risingamp
-    risingamp = risingamp + 2
+sample Gronk
+
+sleep 6
+
+live_loop :samal do
+  3.times do
+    use_synth :prophet
+    smooth
   end
   stop
 end
 
-sleep 9
+sleep 5
 
-sample war
+live_loop :damal do
+  2.times do
+    use_synth :piano
+    smooth
+  end
+  stop
+end
+
+sleep 2
+
+live_loop :lamal do
+  2.times do
+    use_synth :saw
+    smooth
+  end
+  stop
+end
+
+sleep 15
+
+use_synth :organ_tonewheel
+
+
+# MEASURE 1 ---------------------------
+x :a4, :a5
+x :a4, :a5
+x :c5, :c6
+x :a4, :a5
+x :d5, :d6
+x :a4, :a5
+x :e5, :e6
+x :d5, :d6
+
+
+
+# MEASURE 2 ---------------------------
+x :c5, :c6
+x :c5, :c6
+x :e5, :e6
+x :c5, :c6
+x :g5, :g6
+x :c4, :c5
+x :e5, :e6
+x :c4, :c5
+
+
+
+# MEASURE 3 ---------------------------
+x :g4, :g5
+x :g4, :g5
+x :b4, :b5
+x :g4, :g5
+x :c5, :c6
+x :g4, :g5
+x :d5, :d6
+x :c5, :c6
+
+
+
+# MEASURE 4 ---------------------------
+x :f4, :f5
+x :f4, :f5
+x :a4, :a5
+x :f4, :f5
+x :c5, :c6
+x :f4, :f5
+x :c5, :c6
+x :b4, :b5
+
+sleep 0.5
+
+sample did
+
+sleep 6
+
+live_loop :kamal do
+  3.times do
+    play_million(notes, durations)
+  end
+  stop
+end
+
+sleep 26
+
+live_loop :wamal do
+  8.times do
+    sleep 1
+    sample :drum_bass_soft, amp: loweramp
+    loweramp = loweramp - 2
+  end
+  stop
+end
+
+sleep 7
+
+sample take
+
+sleep 1
+
+sample see
+
+sleep 19.5
+
+sample twenty,  amp:0.25
+
+sleep 72.5
+
+sample town
+
+
