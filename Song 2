@@ -1,18 +1,25 @@
 # Sonic Pi Code for "Smooth Criminal" Melody
 use_bpm 118
 
+# A sample from the YouTube series, A Slap On Titan
 chrome = "C:/Users/djamal_bongo/Desktop/chrome.mp3"
 
+#A sample from the movie, The Emperor's New Groove
 Gronk = "C:/Users/djamal_bongo/Desktop/gronk.mp3"
 
+#A sample from the YouTube series, A Slap on Titan
 did = "C:/Users/djamal_bongo/Desktop/did.mp3"
 
+#A sample from the song, Solo by: Future
 take = "C:/Users/djamal_bongo/Desktop/akt.mp3"
 
+#A sample from the song, 24songs by: Playboi Carti
 twenty = "C:/Users/djamal_bongo/Desktop/242.mp3"
 
+#A sample from the anime series, Attack on Titan
 see = "C:/Users/djamal_bongo/Desktop/see2.mp3"
 
+#A sample from the YouTube series, A Slap on Titan
 town = "C:/Users/djamal_bongo/Desktop/town.mp3"
 
 
@@ -39,8 +46,9 @@ end
 
 define :x do |n1, n2|
   play n1
+  sleep 0.25
   play n2
-  sleep 0.5
+  sleep 0.25
 end
 
 sample chrome
@@ -85,7 +93,7 @@ sleep 0.5
 
 sample Gronk
 
-sleep 6
+sleep 5.5
 
 live_loop :samal do
   3.times do
@@ -115,62 +123,52 @@ live_loop :lamal do
   stop
 end
 
-sleep 15
+sleep 13
 
-use_synth :organ_tonewheel
+use_synth :piano
 
-
-# MEASURE 1 ---------------------------
-x :a4, :a5
-x :a4, :a5
-x :c5, :c6
-x :a4, :a5
-x :d5, :d6
-x :a4, :a5
-x :e5, :e6
-x :d5, :d6
+use_bpm 100
 
 
 
-# MEASURE 2 ---------------------------
-x :c5, :c6
-x :c5, :c6
-x :e5, :e6
-x :c5, :c6
-x :g5, :g6
-x :c4, :c5
-x :e5, :e6
-x :c4, :c5
+# A ---------------------------
+x :b5, :b4
+x :b5, :as5
+x :b4, :as5
+x :fs5, :ds5
+x :cs5, :b4
+x :b5, :b4
+x :b5, :as5
+x :b4, :as5
 
 
 
-# MEASURE 3 ---------------------------
-x :g4, :g5
-x :g4, :g5
+# Thousand ---------------------------
+x :b4, :fs5
+x :b4, :fs5
+x :b4, :ds5
+x :e5, :ds5
 x :b4, :b5
-x :g4, :g5
-x :c5, :c6
-x :g4, :g5
-x :d5, :d6
-x :c5, :c6
-
-
-
-# MEASURE 4 ---------------------------
-x :f4, :f5
-x :f4, :f5
-x :a4, :a5
-x :f4, :f5
-x :c5, :c6
-x :f4, :f5
-x :c5, :c6
 x :b4, :b5
+x :as5, :b4
+x :as5, :fs5
+
+
+
+# Miles ---------------------------
+x :ds5, :cs5
+x :b4, :ds5
+x :cs5, :b4
+x :ds5, :cs5
+x :b4, :fs5
+
+play :cs5
 
 sleep 0.5
 
 sample did
 
-sleep 6
+sleep 5
 
 live_loop :kamal do
   3.times do
@@ -179,7 +177,7 @@ live_loop :kamal do
   stop
 end
 
-sleep 26
+sleep 22
 
 live_loop :wamal do
   8.times do
@@ -198,12 +196,13 @@ sleep 1
 
 sample see
 
-sleep 19.5
+sleep 16.5
 
 sample twenty,  amp:0.25
 
-sleep 72.5
+sleep 61.5
 
 sample town
+
 
 
