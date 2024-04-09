@@ -1,0 +1,271 @@
+# Sonic Pi Code for "Smooth Criminal" Melody
+use_bpm 118
+
+#A sample of a time warp sound effect from YouTube
+rer = "C:/Users/djamal_bongo/Desktop/rer.mp3"
+
+#A sample from the YouTube series, A Slap On Titan
+chrome = "C:/Users/djamal_bongo/Desktop/chrome.mp3"
+
+#A sample from the movie, The Emperor's New Groove
+Gronk = "C:/Users/djamal_bongo/Desktop/gronk.mp3"
+
+#A sample from the YouTube series, A Slap on Titan
+did = "C:/Users/djamal_bongo/Desktop/did.mp3"
+
+#A sample from the song, Solo by: Future
+take = "C:/Users/djamal_bongo/Desktop/akt.mp3"
+
+#A sample from the song, 24songs by: Playboi Carti
+twenty = "C:/Users/djamal_bongo/Desktop/242.mp3"
+
+#A sample from the anime series, Attack on Titan
+see = "C:/Users/djamal_bongo/Desktop/see2.mp3"
+
+#A sample from the YouTube series, A Slap on Titan
+town = "C:/Users/djamal_bongo/Desktop/town.mp3"
+
+
+risingamp = 2
+
+loweramp = 14
+
+notes = [:e5, :d5, :e5, :d5, :e5, :b4, :d5, :c5, :a4, :a4, :b4, :e4, :g4, :b4, :c5, :d5, :e5, :d5, :c5, :b4, :a4 ]
+
+durations = [ 0.5, 0.5, 0.5, 0.5, 0.5, 1, 1, 0.5, 0.5, 0.5, 1, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1]
+
+define :play_million do |notes, durations|
+  i=0
+  len = notes.length
+  
+  21.times do
+    use_bpm 170
+    use_synth :prophet
+    play notes [i]
+    sleep durations [i]
+    i = i + 1
+  end
+end
+
+define :x do |n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21, n22, n23, n24, n25, n26, n27, n28, n29, n30, n31, n32, n33, n34, n35, n36, n37, n38, n39, n40, n41, n42, n43, n44, n45|
+  play n1
+  sleep 0.25
+  play n2
+  sleep 0.25
+  play n3
+  sleep 0.25
+  play n4
+  sleep 0.25
+  play n5
+  sleep 0.25
+  play n6
+  sleep 0.25
+  play n7
+  sleep 0.25
+  play n8
+  sleep 0.25
+  play n9
+  sleep 0.25
+  play n10
+  sleep 0.25
+  play n11
+  sleep 0.25
+  play n12
+  sleep 0.25
+  play n13
+  sleep 0.25
+  play n14
+  sleep 0.25
+  play n15
+  sleep 0.25
+  play n16
+  sleep 0.25
+  play n17
+  sleep 0.25
+  play n18
+  sleep 0.25
+  play n19
+  sleep 0.25
+  play n20
+  sleep 0.25
+  play n21
+  sleep 0.25
+  play n22
+  sleep 0.25
+  play n23
+  sleep 0.25
+  play n24
+  sleep 0.25
+  play n25
+  sleep 0.25
+  play n26
+  sleep 0.25
+  play n27
+  sleep 0.25
+  play n28
+  sleep 0.25
+  play n29
+  sleep 0.25
+  play n30
+  sleep 0.25
+  play n31
+  sleep 0.25
+  play n32
+  sleep 0.25
+  play n33
+  sleep 0.25
+  play n34
+  sleep 0.25
+  play n35
+  sleep 0.25
+  play n36
+  sleep 0.25
+  play n37
+  sleep 0.25
+  play n38
+  sleep 0.25
+  play n39
+  sleep 0.25
+  play n40
+  sleep 0.25
+  play n41
+  sleep 0.25
+  play n42
+  sleep 0.25
+  play n43
+  sleep 0.25
+  play n44
+  sleep 0.25
+  play n45
+end
+
+sample rer
+
+sleep 9
+
+sample chrome
+
+sleep 12
+
+
+define :smooth do
+  play :e4
+  sleep 0.5
+  play :d4
+  sleep 0.5
+  play :c4
+  sleep 0.5
+  play :b3
+  sleep 0.5
+  play :e4
+  sleep 0.5
+  play :d4
+  sleep 0.5
+  play :c4
+  sleep 0.5
+  play :b3
+  sleep 0.5
+  play :e4
+  sleep 0.5
+  play :d4
+  sleep 0.5
+  play :c4
+  sleep 0.5
+  play :b3
+  sleep 0.5
+  play :c4
+  sleep 0.5
+end
+
+1.times do
+  smooth
+end
+
+sleep 0.5
+
+sample Gronk
+
+sleep 5.5
+
+live_loop :samal do
+  3.times do
+    use_synth :prophet
+    smooth
+  end
+  stop
+end
+
+sleep 5
+
+live_loop :damal do
+  2.times do
+    use_synth :piano
+    smooth
+  end
+  stop
+end
+
+sleep 2
+
+live_loop :lamal do
+  2.times do
+    use_synth :saw
+    smooth
+  end
+  stop
+end
+
+sleep 13
+
+use_synth :piano
+
+use_bpm 100
+
+
+
+# A Thousand Miles ---------------------------
+x :b5, :b4, :b5, :as5, :b4, :as5, :fs5, :ds5, :cs5, :b4, :b5, :b4, :b5, :as5, :b4, :as5, :b4, :fs5, :b4, :fs5, :b4, :ds5, :e5, :ds5, :b4, :b5, :b4, :b5, :as5, :b4, :as5, :fs5, :ds5, :cs5, :b4, :ds5, :cs5, :b4, :ds5, :cs5,  :ds5, :cs5, :b4, :fs5, :cs5
+
+
+play :cs5
+
+sleep 0.5
+
+sample did
+
+sleep 5
+
+live_loop :kamal do
+  3.times do
+    play_million(notes, durations)
+  end
+  stop
+end
+
+sleep 22
+
+live_loop :wamal do
+  8.times do
+    sleep 1
+    sample :drum_bass_soft, amp: loweramp
+    loweramp = loweramp - 2
+  end
+  stop
+end
+
+sleep 7
+
+sample take
+
+sleep 1
+
+sample see
+
+sleep 16.5
+
+sample twenty,  amp:0.25
+
+sleep 61.5
+
+sample town
+
